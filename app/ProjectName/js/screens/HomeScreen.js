@@ -14,7 +14,7 @@ export default class HomeScreen extends Component {
                     translucent={true} 
                     style="light" 
                 />
-                <TGHealthPanel status={1} />
+                <TGHealthPanel status={0} />
                 <TGNavBar navigation={this.props.navigation} isDoctor={false} option={1} />
             </SafeAreaView>
         )

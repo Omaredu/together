@@ -59,20 +59,26 @@ export default class DoctorScreen extends Component {
                         <TGText style={{marginTop: 15, marginBottom: 10}} medium>Health Status</TGText>
                         <View style={styles.statusSelector}>
                             <TGOptionButton
-                                color={TGColors.healthy} 
-                                label="Healthy"
-                                checked={this.state.healthStatus === 1}
-                                onPress={() => this.setState({ healthStatus: 1 })} 
+                                color={TGColors.highRisk} 
+                                label="High Risk"
+                                checked={this.state.healthStatus === 0}
+                                onPress={() => this.setState({ healthStatus: 0 })} 
                             />
                             <TGOptionButton
                                 color={TGColors.beCareful} 
                                 label="Be Careful"
+                                checked={this.state.healthStatus === 1}
+                                onPress={() => this.setState({ healthStatus: 1 })} 
+                            />
+                            <TGOptionButton
+                                color={TGColors.healthy} 
+                                label="Healthy"
                                 checked={this.state.healthStatus === 2}
                                 onPress={() => this.setState({ healthStatus: 2 })} 
                             />
                             <TGOptionButton
-                                color={TGColors.highRisk} 
-                                label="High Risk"
+                                color={TGColors.vaccinated} 
+                                label="With Vaccine"
                                 checked={this.state.healthStatus === 3}
                                 onPress={() => this.setState({ healthStatus: 3 })} 
                             />

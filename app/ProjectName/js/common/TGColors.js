@@ -18,7 +18,12 @@ const NAMED_COLORS = {
 
     // reds (light to dark)
     transparentRedOrange: "rgba(255, 51, 0, 0.5)",
-    redOrange: "#FF3100"
+    redOrange: "#FF3100",
+    
+    // blues (light to dark)
+    transparentBlue: "rgba(7, 121, 228, 0.8)",
+    blue: "#0779E4",
+
 }
 
 const THEMED_COLORS = {
@@ -30,29 +35,34 @@ const THEMED_COLORS = {
     highRisk: NAMED_COLORS.redOrange,
     beCareful: NAMED_COLORS.yellowMustard,
     healthy: NAMED_COLORS.leafGreen,
+    vaccinated: NAMED_COLORS.blue,
 
     getByStatus: (status) => {
         switch (status) {
-            case 1:
-                return NAMED_COLORS.leafGreen
-            case 2:
-                return NAMED_COLORS.yellowMustard
-            case 3:
+            case 0: 
                 return NAMED_COLORS.redOrange
+            case 1:
+                return NAMED_COLORS.yellowMustard
+            case 2:
+                return NAMED_COLORS.leafGreen
+            case 3:
+                return NAMED_COLORS.blue
             default:
                 return NAMED_COLORS.leafGreen
         }
     },
     getTransparentByStatus: (status) => {
         switch (status) {
-            case 1:
-                return NAMED_COLORS.transparentLeafGreen
-            case 2:
-                return NAMED_COLORS.transparentYellowMustard
-            case 3:
+            case 0:
                 return NAMED_COLORS.transparentRedOrange
-            default:
+            case 1:
+                return NAMED_COLORS.transparentYellowMustard
+            case 2:
                 return NAMED_COLORS.transparentLeafGreen
+            case 3:
+                return NAMED_COLORS.transparentBlue
+            default:
+                return NAMED_COLORS.transparentRedOrange
         }
     }
 }

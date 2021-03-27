@@ -8,25 +8,29 @@ import { TGColors, TGText } from './common'
 export default class TGStatusBubble extends Component {
     _getPhrase(status) {
         switch (status) {
-            case 1:
-                return "Healthy"
-            case 2:
-                return "Be Careful"
-            case 3:
+            case 0:
                 return "High Risk"
+            case 1:
+                return "Be Careful"
+            case 2:
+                return "Healthy"
+            case 3:
+                return "With Vaccine"
             default:
-                return "Healty"
+                return "High Risk"
         }
     }
 
     _getIcon(status) {
         switch (status) {
-            case 1:
-                return "lock-open"
-            case 2:
-                return "error-outline"
-            case 3:
+            case 0:
                 return "lock"
+            case 1:
+                return "error-outline"
+            case 2:
+                return "lock-open"
+            case 3:
+                return "shield"
             default:
                 return "lock-open"
         }
