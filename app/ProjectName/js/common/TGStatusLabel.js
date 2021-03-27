@@ -6,14 +6,16 @@ import TGText from './TGText'
 export default class TGStatusLabel extends Component {
     _getPhrase(status) {
         switch (status) {
-            case 1:
-                return "Healthy"
-            case 2:
-                return "Be Careful"
-            case 3:
+            case 0:
                 return "High Risk"
-            default:
+            case 1:
+                return "Be Careful"
+            case 2:
                 return "Healthy"
+            case 3:
+                return "With Vaccine"
+            default:
+                return "High Risk"
         }
     }
 
