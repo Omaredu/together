@@ -1,2 +1,3 @@
 [submodule "backend/together_api"]
+    path = backend/together_api
 	url = https://github.com/Omaredu/together-backend.git
